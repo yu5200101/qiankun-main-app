@@ -38,8 +38,8 @@ start({
     experimentalStyleIsolation: true
   },
   prefetch: (apps: AppMetadata[]) => {
-    const criticalAppNames = apps.filter(app => app.name === 'react-sub-app').map(app => app.name);
-    const minorAppsName = apps.filter(app => app.name !== 'react-sub-app').map(app => app.name);
+    const criticalAppNames = apps.filter(app => app.name === 'react1-sub-app').map(app => app.name);
+    const minorAppsName = apps.filter(app => app.name !== 'react1-sub-app').map(app => app.name);
     return { criticalAppNames, minorAppsName };
   }
 });
