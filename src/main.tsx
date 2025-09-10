@@ -19,9 +19,16 @@ createRoot(document.getElementById('root')!).render(
 registerMicroApps([
   {
     name: 'react-sub-app', // 子应用唯一标识
-    entry: '//localhost:3001', // 子应用服务地址
+    entry: 'https://qiankun-react-app.vercel.app', // 子应用服务地址
     container: '#subapp-container', // 挂载节点ID
-    activeRule: '/subapp', // 路由匹配规则
+    activeRule: '/subapp/react', // 路由匹配规则
+    props: actions // 可选，传递全局状态
+  },
+  {
+    name: 'vue-sub-app', // 子应用唯一标识
+    entry: 'https://qiankun-vue3-app.vercel.app', // 子应用服务地址
+    container: '#subapp-container', // 挂载节点ID
+    activeRule: '/subapp/vue', // 路由匹配规则
     props: actions // 可选，传递全局状态
   }
 ]);
